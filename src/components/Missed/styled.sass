@@ -1,0 +1,69 @@
+
+//Mixins
+=rotate($val)
+  -moz-transform: rotate($val)
+  -webkit-transform: rotate($val)
+  -o-transform: rotate($val)
+  -ms-transform: rotate($val)
+  transform: rotate($val)
+
+=calc($property, $val)
+  #{$property}: -webkit-calc(#{$val})
+  #{$property}: -moz-calc(#{$val})
+  #{$property}: calc(#{$val})
+
+=transition($val)
+  -webkit-transition: $val
+  -moz-transition: $val
+  -ms-transition: $val
+  -o-transition: $val
+  transition: $val
+
+
+// Colors *** Watch out! I am a color blind. ***
+$bodybg: #3C3F64
+$blue: #585DFE
+$darkgrey: #53555D
+$lightgrey: #E6E6E7
+$humanbody: #FFCD82
+$shirtLeft: #71CC54
+$shirtRight: #12A56B
+$appbg: #F5F5F5
+$white: #FFFFFF
+$yellow: #FFB800
+
+// Font Size
+$default: 14px
+$large: 36px
+
+// Font Weight
+$bold: bold
+
+   
+.fail-box
+  position: absolute
+  top: 40px
+  right: 0 
+  width: 500px
+  
+  .fail-box-title
+    text-transform: uppercase
+    color: $darkgrey
+  
+  .fail-box-menu
+    width: 100%
+    height: 70px    
+    
+    .fail-box-menu-item
+      text-align: center
+      color: $blue
+      float: left
+      font-size: $large
+      height: 70px
+      margin: 10px
+      text-transform: uppercase
+      &:first-child
+        margin-left: 0
+      &:last-child
+        margin-right: 0 
+      
